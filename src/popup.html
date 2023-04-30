@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<script type="module" src="popup.js" defer async></script>
+	<link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+	<h1>Table2CSV</h1>
+
+	<article>
+		<header>設定</header>
+		<label class="switchItem">
+			<div class="switchArea">
+				<input type="checkbox" id="removeNewLineInCell">
+				<label for="removeNewLineInCell"><span>　</span></label>
+				<div class="knob"></div>
+			</div>
+			セル内の改行を除去する
+		</label>
+		<label class="switchItem">
+			<div class="switchArea">
+				<input type="checkbox" id="removeWhiteSpace">
+				<label for="removeWhiteSpace"><span>　</span></label>
+				<div class="knob"></div>
+			</div>
+			セル内の連続した空白を除去する
+		</label>
+	</article>
+
+	<article>
+		<header>見つかったテーブル</header>
+		<div id="tableList"></div>
+	</article>
+
+</body>
+
+</html>

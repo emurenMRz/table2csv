@@ -1,0 +1,65 @@
+body { margin: 0; padding: 0; min-width: 24em; }
+
+h1 {
+	margin: 0;
+	padding-left: 1em;
+	width: 100%;
+	line-height: 2em;
+	background: linear-gradient(0deg, aquamarine, mediumspringgreen);
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+article { display: block; margin: 1em; }
+header { margin-bottom: 1em; border-bottom: 1px solid mediumspringgreen; font-weight: bold; }
+
+.switchItem {
+	position: relative;
+	display: block;
+	margin: .5em auto;
+	cursor: pointer;
+}
+
+.switchArea {
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	line-height: calc(1em + 4px);
+	letter-spacing: 0;
+	text-align: center;
+}
+
+.switchArea input[type="checkbox"] { display: none; }
+.switchArea label {
+	display: block;
+	width: calc(2em + 8px);
+	box-sizing: border-box;
+	border: 2px solid gray;
+	border-radius: 2px;
+}
+.switchArea input[type="checkbox"]:checked+label { border-color: springgreen; }
+
+.switchArea .knob {
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	background: gray;
+	top: 4px;
+	left: 4px;
+	border-radius: 2px;
+	transition: .2s;
+}
+.switchArea input[type="checkbox"]:checked~.knob {
+	transform: translateX(1em);
+	background: springgreen;
+}
+
+#tableList label {
+	display: block;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.noEntry {
+	color: gray;
+}
